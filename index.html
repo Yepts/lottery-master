@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>抽奖</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>	
+	</head>	
+	<body style="overflow:auto">		
+		<div id="user_list" class="user_list">
+			<!-- 转盘 -->
+			<canvas id="tutorial" ></canvas>		
+			<img src="images/wine.png" id="wine-img" style="display:none;" />	
+			<img id="stop_button" src="images/mpluck_luckan.png" style="position: absolute;top: 685px;left: 235px;cursor: pointer;"><a href="javascript:;"></a></img>
+			<img src="images/mpluck_pic1.png" id="1-img"  style="display:none;" />
+			<img src="images/mpluck_pic2.png" id="2-img"  style="display:none;" />
+			<img src="images/mpluck_pic3.png" id="3-img"  style="display:none;" />
+			<img src="images/mpluck_pic4.png" id="4-img"  style="display:none;" />
+			<img src="images/mpluck_pic5.png" id="5-img"  style="display:none;" />
+			<img src="images/mpluck_pic6.png" id="6-img"  style="display:none;" />
+			<img src="images/mpluck_pic7.png" id="7-img"  style="display:none;" />
+			<img src="images/mpluck_pic8.png" id="8-img"  style="display:none;" />
+			<img src="images/mpluck_pic9.png" id="9-img"  style="display:none;" />
+			<img src="images/mpluck_zz.png"   id="10-img" style="display:none;"/>
+			<!-- 获奖玩家滚动信息 -->
+			<marquee behavior="scroll" scrollAmount="2" width="500" height="60" direction="up"  id="scroll" style="position:absolute;top: 1000px;left:100px;">
+				<table >
+					<thead >
+						<th align="left">幸运玩家</th>
+						<th align="center">联系方式</th>						
+					</thead>
+					<tbody class="list">
+				</tbody>				
+				</table>
+			</marquee>	
+		</div>
+		<!-- 填写获奖信息浮动层 -->
+		<div id="light" class="white_content">
+	      	<div class="close"><a href="javascript:void(0)" onclick="hide('light')"> 关闭</a></div>
+	      	<div class="con"> 
+	      	<tr><td>姓名：</td><td><input id="winnerUser"></input></td></tr><br />
+	      	<tr><td>联系方式：</td><td><input id="winnerTEL"></input></td></tr>
+	      	<button style="margin:0 auto;display:block;" onclick="submit()">提交</button>
+      	</div>
+</div>
+		<script type="text/javascript" src="./js/jQuery.publicBox.js"></script>		
+		<script type="text/javascript" src="./js/lottery.js"></script>
+		<script type="text/javascript" src="./js/index.js"></script>	
+			
+	</body>
+</html>
